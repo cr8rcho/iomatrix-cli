@@ -36,6 +36,24 @@ iomatrix link <id> -a "https://..."  # Add link
 | 3 | Delegate | Urgent & Not Important |
 | 4 | Delete | Not Urgent & Not Important |
 
+## Agent Skill (Claude Code / Codex CLI)
+
+An [Agent Skill](skills/iomatrix/SKILL.md) is included so coding agents can manage your matrix for you — ask things like "what tasks are left?" or "add a task to my matrix". SKILL.md is an open format, so the same file works in Claude Code, Codex CLI, and other compatible agents.
+
+After installing the CLI, copy the skill into your agent's skills directory:
+
+```bash
+# Claude Code
+mkdir -p ~/.claude/skills/iomatrix
+curl -fsSL https://raw.githubusercontent.com/cr8rcho/iomatrix-cli/main/skills/iomatrix/SKILL.md \
+  -o ~/.claude/skills/iomatrix/SKILL.md
+
+# Codex CLI
+mkdir -p ~/.codex/skills/iomatrix
+curl -fsSL https://raw.githubusercontent.com/cr8rcho/iomatrix-cli/main/skills/iomatrix/SKILL.md \
+  -o ~/.codex/skills/iomatrix/SKILL.md
+```
+
 ## Uninstall
 
 ```bash
