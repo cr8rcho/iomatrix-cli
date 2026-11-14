@@ -11,7 +11,8 @@ curl -fsSL https://raw.githubusercontent.com/cr8rcho/iomatrix-cli/main/install.s
 ## Requirements
 
 - macOS 15+
-- iomatrix macOS app installed and launched at least once
+- iomatrix macOS app **1.16.0 or later**, installed and launched at least once
+- The CLI and the app must be on matching data versions. If the CLI says the app's data is older or newer, update whichever one it names — it changes nothing until they match.
 
 ## Usage
 
@@ -23,6 +24,9 @@ iomatrix list -q 2                    # List Q2 only
 iomatrix done <id>                    # Mark complete
 iomatrix move <id> -q 3              # Move to Q3
 iomatrix edit <id> -t "New title"    # Edit task
+iomatrix edit <id> -d "2026-04-15"   # Due date (add " 14:30" for a time)
+iomatrix list -t                      # Subtask trees
+iomatrix add "Subtask" --under <id>   # Add as a subtask (Pro)
 iomatrix delete <id>                  # Delete task
 iomatrix link <id> -a "https://..."  # Add link
 ```
